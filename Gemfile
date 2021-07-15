@@ -45,6 +45,7 @@ group :development, :test do
   gem "faker", "~> 2.18"
   gem "guard", "~> 2.17"
   gem "guard-rspec", "~> 4.7"
+  gem "i18n-tasks", "~> 0.9.34"
   gem "database_cleaner-active_record", "~> 2.0"
 end
 
