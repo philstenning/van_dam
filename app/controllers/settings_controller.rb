@@ -11,6 +11,10 @@ class SettingsController < ApplicationController
       @user.pagination_settings["creators"] = params[:pagination][:creators] == "1"
       @user.pagination_settings["per_page"] = params[:pagination][:per_page].to_i
     end
+    if params[:renderer]
+      @user.renderer_settings["grid_width"] = params[:renderer][:grid_width].to_i
+      @user.renderer_settings["grid_depth"] = params[:renderer][:grid_depth].to_i
+    end
     @user.save!
     redirect_to user_settings_path(@user)
   end
